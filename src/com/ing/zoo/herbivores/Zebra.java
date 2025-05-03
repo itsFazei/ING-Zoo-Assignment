@@ -15,14 +15,14 @@ public class Zebra extends Animal implements Herbivore, Trick {
     @Override
     public void sayHello()
     {
-        helloText = "zebra zebra";
+        helloText = "\u001B[36m zebra zebra \u001B[0m \n";
         System.out.println(helloText);
     }
 
     @Override
     public void eatLeaves()
     {
-        eatText = "munch munch zank yee bra";
+        eatText = "\u001B[36m munch munch zank yee bra \u001B[0m \n";
         System.out.println(eatText);
     }
 
@@ -33,9 +33,9 @@ public class Zebra extends Animal implements Herbivore, Trick {
         int rnd = random.nextInt(2);
 
         if (rnd == 0) {
-            trick = "jump through the rings of fire";
+            trick = "\u001B[36m jump through the rings of fire \u001B[0m \n";
         } else {
-            trick = "perform a salto";
+            trick = "\u001B[36m perform a salto \u001B[0m \n";
         }
         
         System.out.println(trick);

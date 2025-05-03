@@ -17,19 +17,19 @@ public class Pig extends Animal implements Carnivore, Herbivore, Trick {
 
     @Override
     public void sayHello() {
-        helloText = "splash";
+        helloText = "\u001B[36m splash \u001B[0m";
         System.out.println(helloText);
     }
 
     @Override
     public void eatLeaves() {
-        eatText = "munch munch oink";
+        eatText = "\u001B[36m munch munch oink \u001B[0m \n";
         System.out.println(eatText);
     }
 
     @Override
     public void eatMeat() {
-        eatText = "nomnomnom oink thx";
+        eatText = "\u001B[36m nomnomnom oink thx \u001B[0m \n";
         System.out.println(eatText);
     }
 
@@ -39,11 +39,11 @@ public class Pig extends Animal implements Carnivore, Herbivore, Trick {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "rolls in the mud";
+            trick = "\u001B[36m rolls in the mud \u001B[0m \n";
         }
         else
         {
-            trick = "runs in circles";
+            trick = "\u001B[36m runs in circles \u001B[0m \n";
         }
         System.out.println(trick);
     }

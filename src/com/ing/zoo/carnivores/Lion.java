@@ -10,13 +10,13 @@ public class Lion extends Animal implements Carnivore {
 
     @Override
     public void eatMeat() {
-        eatText = "nomnomnom thx mate";
+        eatText = "\u001B[31m nomnomnom thx mate \u001B[0m \n";
         System.out.println(eatText);
     }
 
     @Override
     public void sayHello() {
-        helloText = "roooaoaaaaar";
+        helloText = "\u001B[33m roooaoaaaaar \u001B[0m \n";
         System.out.println(helloText);
     }
 

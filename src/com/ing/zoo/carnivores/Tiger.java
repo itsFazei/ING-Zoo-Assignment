@@ -15,13 +15,13 @@ public class Tiger extends Animal implements Carnivore, Trick {
 
     @Override
     public void sayHello() {
-        helloText = "rraaarww";
+        helloText = "\u001B[31m rraaarww \u001B[0m \n";
         System.out.println(helloText);
     }
 
     @Override
     public void eatMeat() {
-        eatText = "nomnomnom oink wubalubadubdub";
+        eatText = "\u001B[31mnomnomnom oink wubalubadubdub \u001B[0m \n";
         System.out.println(eatText);
     }
 
@@ -32,9 +32,9 @@ public class Tiger extends Animal implements Carnivore, Trick {
         int rnd = random.nextInt(2);
 
         if(rnd == 0) {
-            trick = "jumps in tree";
+            trick = "\u001B[31m jumps in tree \u001B[0m \n";
         } else {
-            trick = "scratches ears";
+            trick = "\u001B[31m scratches ears \u001B[0m \n";
         }
 
         System.out.println(trick);
