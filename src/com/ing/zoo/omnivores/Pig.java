@@ -1,37 +1,40 @@
-package com.ing.zoo;
+package com.ing.zoo.omnivores;
 
 import java.util.Random;
 
-public class Pig {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+import com.ing.zoo.Animal;
+import com.ing.zoo.Trick;
+import com.ing.zoo.carnivores.Carnivore;
+import com.ing.zoo.herbivores.Herbivore;
 
-    public Pig()
-    {
+public class Pig extends Animal implements Carnivore, Herbivore, Trick {
+
+    private String trick;
+
+    public Pig() {
+        super();
     }
 
-    public void sayHello()
-    {
+    @Override
+    public void sayHello() {
         helloText = "splash";
         System.out.println(helloText);
     }
 
-    public void eatLeaves()
-    {
+    @Override
+    public void eatLeaves() {
         eatText = "munch munch oink";
         System.out.println(eatText);
     }
 
-    public void eatMeat()
-    {
+    @Override
+    public void eatMeat() {
         eatText = "nomnomnom oink thx";
         System.out.println(eatText);
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void performTrick() {
         Random random = new Random();
         int rnd = random.nextInt(2);
         if(rnd == 0)
