@@ -76,6 +76,11 @@ Once the program is running, you can input the following commands:
   Example:
   `hello`
 
+  NOTE: you can specify the animal name after the `hello` command:
+
+  Example:
+  `hello henk`
+
 - **`give leaves`**: Feeds all herbivores in the zoo leaves.
 
   Example:
