@@ -10,7 +10,9 @@ import com.ing.zoo.carnivores.Lion;
 import com.ing.zoo.carnivores.Tiger;
 import com.ing.zoo.herbivores.Herbivore;
 import com.ing.zoo.herbivores.Hippo;
+import com.ing.zoo.herbivores.Monkey;
 import com.ing.zoo.herbivores.Zebra;
+import com.ing.zoo.omnivores.Bear;
 import com.ing.zoo.omnivores.Pig;
 
 public class Zoo {
@@ -37,9 +39,15 @@ public class Zoo {
         Zebra marty = new Zebra();
         marty.name = "marty";
 
+        Monkey pieter = new Monkey();
+        pieter.name = "pieter";
+
+        Bear ivan = new Bear();
+        ivan.name = "ivan";
+
         List<Animal> animalList = new ArrayList<>();
 
-        Collections.addAll(animalList, henk, elsa, dora, wally, marty);
+        Collections.addAll(animalList, henk, elsa, dora, wally, marty, pieter, ivan);
 
         try (Scanner scanner = new Scanner(System.in)) {
 

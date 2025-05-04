@@ -21,7 +21,7 @@ public class Tiger extends Animal implements Carnivore, Trick {
 
     @Override
     public void eatMeat() {
-        eatText = "\u001B[31mnomnomnom oink wubalubadubdub \u001B[0m \n";
+        eatText = "\u001B[31m nomnomnom oink wubalubadubdub \u001B[0m \n";
         System.out.println(eatText);
     }
 

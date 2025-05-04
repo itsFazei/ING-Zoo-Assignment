@@ -4,7 +4,9 @@ src/com/ing/zoo/carnivores/Lion.java
 src/com/ing/zoo/carnivores/Tiger.java
 src/com/ing/zoo/herbivores/Herbivore.java
 src/com/ing/zoo/herbivores/Hippo.java
+src/com/ing/zoo/herbivores/Monkey.java
 src/com/ing/zoo/herbivores/Zebra.java
+src/com/ing/zoo/omnivores/Bear.java
 src/com/ing/zoo/omnivores/Pig.java
 src/com/ing/zoo/Trick.java
 src/com/ing/zoo/Zoo.java
