@@ -15,7 +15,18 @@ import com.ing.zoo.herbivores.Zebra;
 import com.ing.zoo.omnivores.Bear;
 import com.ing.zoo.omnivores.Pig;
 
+/**
+ * Represents a zoo where various animals can be interacted with.
+ * Provides a command interface to interact with the animals, 
+ * including making them say hello, feeding them leaves or meat, and performing tricks.
+ */
 public class Zoo {
+
+    /**
+     * Main method to run the zoo's command interface.
+     * It processes commands such as "hello", "give leaves", "give meat", and "perform trick".
+     * Each command interacts with the list of animals in the zoo.
+     */
     public static void main(String[] args) {
 
         String[] commands = new String[4];
@@ -24,6 +35,7 @@ public class Zoo {
         commands[2] = "give meat";
         commands[3] = "perform trick";
 
+        // Create animal instances
         Lion henk = new Lion();
         henk.name = "henk";
 
@@ -45,16 +57,17 @@ public class Zoo {
         Bear ivan = new Bear();
         ivan.name = "ivan";
 
+        // Add all animals to a list
         List<Animal> animalList = new ArrayList<>();
-
         Collections.addAll(animalList, henk, elsa, dora, wally, marty, pieter, ivan);
 
+        // Scanner for input
         try (Scanner scanner = new Scanner(System.in)) {
 
             System.out.print("Voer uw command in: ");
-
             String input = scanner.nextLine();
 
+            // Handle the "hello" command
             if (input.contains(commands[0])) {
                 
                 if (input.length() <= commands[0].length()) {
@@ -71,10 +84,8 @@ public class Zoo {
                     for (Animal animal : animalList) {
 
                         if (animal.name.equals(animalInput)) {
-
                             animal.sayHello();
                             return;
-
                         }
                     }
 
@@ -86,6 +97,7 @@ public class Zoo {
 
             }
 
+            // Handle the "give leaves" command
             if (input.contains(commands[1])) {
                 
                 System.out.println("Feeding herbivores... \n");
@@ -93,15 +105,15 @@ public class Zoo {
                 for (Animal animal : animalList)  {
                     
                     if (animal instanceof Herbivore) {
-                        
                         ((Herbivore) animal).eatLeaves();
                     } 
                 }
 
-                System.out.println("Succesfully fed the herbivores!");
+                System.out.println("Successfully fed the herbivores!");
                 return;
             }
 
+            // Handle the "give meat" command
             if (input.contains(commands[2])) {
                                 
                 System.out.println("Feeding carnivores... \n ");
@@ -109,16 +121,15 @@ public class Zoo {
                 for (Animal animal : animalList)  {
                     
                     if (animal instanceof Carnivore) {
-                        
                         ((Carnivore) animal).eatMeat();
                     }
                 }
 
-                System.out.println("Succesfully fed the carnivores!");
+                System.out.println("Successfully fed the carnivores!");
                 return;
             }
 
-
+            // Handle the "perform trick" command
             if (input.contains(commands[3])) {
 
                 System.out.println("Performing circus tricks... \n ");
@@ -130,9 +141,8 @@ public class Zoo {
                     }
                 }
 
-                System.out.println("Succesfully performed circus tricks!");
+                System.out.println("Successfully performed circus tricks!");
                 return;
-                
             }
 
             System.out.println("Unknown command: " + input);
