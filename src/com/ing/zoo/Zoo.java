@@ -84,10 +84,10 @@ public class Zoo {
                 
                 for (Animal animal : animalList)  {
                     
-                    if (animal instanceof Herbivore herbivore) {
+                    if (animal instanceof Herbivore) {
                         
-                        herbivore.eatLeaves();
-                    }
+                        ((Herbivore) animal).eatLeaves();
+                    } 
                 }
 
                 System.out.println("Succesfully fed the herbivores!");
@@ -100,9 +100,9 @@ public class Zoo {
                 
                 for (Animal animal : animalList)  {
                     
-                    if (animal instanceof Carnivore carnivore) {
+                    if (animal instanceof Carnivore) {
                         
-                        carnivore.eatMeat();
+                        ((Carnivore) animal).eatMeat();
                     }
                 }
 
@@ -117,9 +117,8 @@ public class Zoo {
                 
                 for (Animal animal : animalList)  {
                     
-                    if (animal instanceof Trick trick) {
-                        
-                        trick.performTrick();
+                    if (animal instanceof Trick) {   
+                        ((Trick) animal).performTrick();
                     }
                 }
 

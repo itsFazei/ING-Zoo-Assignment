@@ -17,7 +17,7 @@ public class Pig extends Animal implements Carnivore, Herbivore, Trick {
 
     @Override
     public void sayHello() {
-        helloText = "\u001B[36m splash \u001B[0m";
+        helloText = "\u001B[36m splash \u001B[0m \n";
         System.out.println(helloText);
     }
 
