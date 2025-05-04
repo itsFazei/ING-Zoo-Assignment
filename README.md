@@ -13,7 +13,7 @@ To compile and run the project from the command line, follow these steps:
 
    ```bash
    mkdir -p out
-   find src/com/ing/zoo/ -name "*.java"
+   find src/com/ing/zoo/ -name "*.java" > sources.txt
    javac -d out @sources.txt
    ```
 
